@@ -5,32 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ajax 1 - text file</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="width: 500px;">
-    <div>
-        <button id="button" style="display: block; margin: 0 auto;padding: 20px 20px; border-radius: 5px;">Get Text File</button>
+<body>
+    <div class="container">
+        <button id="button">Get Text File</button>
     </div>
     <br><br>
     <div id="text">
 
     </div>
     
-    <script>
-        document.getElementById('button').addEventListener('click', loadText);
-
-        function loadText(){
-            const xhr = new XMLHttpRequest();
-            console.log(xhr);
-            xhr.open('GET', 'CET-4.txt',true);
-            xhr.onload = function(){
-                if (this.status === 200) {
-                    console.log(this.responseText);
-                    document.getElementById('text').innerHTML = this.responseText;
-                }
-            }
-            // sends request
-            xhr.send();
-        }
-    </script>
+<script src="app.js"></script>
 </body>
 </html>
